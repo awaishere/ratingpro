@@ -76,10 +76,10 @@ const styles = StyleSheet.create<Styles>({
     padding: responsiveFontSize(20),
     fontFamily: SFProDisplay,
     color: colors.secondaryGrey,
-    fontSize: responsiveFontSize(17),
+    fontSize: responsiveFontSize(15),
   },
   errorLabel: {
-    marginTop: 0,
+    marginTop: responsiveFontSize(2),
     fontSize: responsiveFontSize(11),
     fontFamily: SFProDisplay,
     color: colors.red,

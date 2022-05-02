@@ -6,8 +6,12 @@ import styles from './styles'
 import { Formik } from 'formik';
 import TextInput from '@components/TextInput'
 import * as Yup from 'yup';
-import { responsiveFontSize } from '@src/library/viewHelper'
 import colors from '@src/colors'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import Button from '@components/Button'
+import { responsiveFontSize } from '@src/library/viewHelper'
+import { Image, Text } from 'react-native'
+import { Google } from '@src/assets/images'
 
 const LOGIN_FIELDS = {
   username: '',
@@ -50,7 +54,6 @@ function index() {
                   error={errors.username}
                   errorVisible={errors.username && touched.username}
                   placeholder={"Username"}
-                  textInputStyle={{ fontSize: responsiveFontSize(15) }}
                   onChangeText={handleChange('username')}
                   textInputWrapper={styles.textContainer}
                 />
@@ -62,17 +65,36 @@ function index() {
                   error={errors.password}
                   errorVisible={errors.password && touched.password}
                   placeholder={"Password"}
-                  textInputStyle={{ fontSize: responsiveFontSize(15) }}
                   onChangeText={handleChange('password')}
                   textInputWrapper={styles.textContainer}
                   password={true}
                 />
-                {/* <Button
-                    label={"Get OTP"}
-                    handleClick={handleSubmit}
-                    buttonStyle={styles.btnStyle}
-                    labelStyle={styles.labelStyle}
-                  /> */}
+
+                <Button
+                  label={"Sign In"}
+                  handleClick={handleSubmit}
+                  buttonStyle={styles.btnStyle}
+                  labelStyle={styles.labelStyle}
+                />
+
+                <Text style={styles.footer}>OR</Text>
+
+
+                <Button
+                  label={"Sign in with Facebook"}
+                  handleClick={() => { }}
+                  Icon={<Icon name="facebook-f" color={colors.white} size={responsiveFontSize(25)} style={styles.icon} />}
+                  buttonStyle={styles.facebookBtn}
+                  labelStyle={styles.labelStyle}
+                />
+
+                <Button
+                  label={"Sign in with google"}
+                  handleClick={() => { }}
+                  Icon={<Image source={Google} style={styles.icon} />}
+                  buttonStyle={styles.googleBtn}
+                  labelStyle={styles.googleLbl}
+                />
               </>
             )}
         </Formik>
