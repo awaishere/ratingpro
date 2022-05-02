@@ -30,6 +30,10 @@ const LoginSchema = Yup.object().shape({
 
 function index() {
 
+  const login = () => {
+
+  }
+
   return (
     <React.Fragment>
       <GeneralStatusBarColor barStyle="dark-content" />
@@ -45,7 +49,7 @@ function index() {
         <Formik
           initialValues={{ ...LOGIN_FIELDS }}
           validationSchema={LoginSchema}
-          onSubmit={() => { }}
+          onSubmit={login}
         >
           {
             ({ handleChange, handleSubmit, values, errors, touched }) => (
