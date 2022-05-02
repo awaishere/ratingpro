@@ -1,7 +1,7 @@
-// let Poppins = 'Poppins-Regular';
-// let PoppinsBold = 'Poppins-SemiBold';
+let SFProDisplay = 'SFProDisplay-Regular';
+let SFProDisplayBold = 'SFProDisplay-Black';
 
-// export {
-//   Poppins,
-//   PoppinsBold
-// }
+export {
+  SFProDisplay,
+  SFProDisplayBold
+}
