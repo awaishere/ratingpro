@@ -10,7 +10,7 @@ import colors from '@src/colors'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Button from '@components/Button'
 import { responsiveFontSize } from '@src/library/viewHelper'
-import { Image, Text } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { Google } from '@src/assets/images'
 
 const LOGIN_FIELDS = {
@@ -38,7 +38,10 @@ function index() {
       <KeyboardAwareScrollView
         contentContainerStyle={styles.container}
         extraHeight={20}
-      >
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled">
+        <View style={styles.placeholder} />
+
         <Formik
           initialValues={{ ...LOGIN_FIELDS }}
           validationSchema={LoginSchema}

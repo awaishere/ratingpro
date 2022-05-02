@@ -8,8 +8,9 @@ const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
     width: '90%',
-    paddingTop: Style.DEVICE_HEIGHT * 0.05,
-    marginTop: Style.DEVICE_HEIGHT * 0.20
+  },
+  placeholder: {
+    height: Style.DEVICE_HEIGHT * 0.20
   },
   textContainer: {
     marginTop: responsiveFontSize(15)
