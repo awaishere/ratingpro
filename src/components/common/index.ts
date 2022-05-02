@@ -1,4 +1,4 @@
-import {  Platform, Dimensions } from 'react-native';
+import { Platform, Dimensions } from 'react-native';
 
 function isIphoneWithNotch() {
   const dimen = Dimensions.get('window');
@@ -22,7 +22,7 @@ function isIphoneWithNotch() {
 let ViewHelper = () => {
   return Platform.select({
     ios: isIphoneWithNotch() ? 40 : 20,
-    android: 0,
+    android: 20,
     default: 0
   })
 
