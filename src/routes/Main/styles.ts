@@ -1,13 +1,15 @@
 import colors from "@src/colors";
-import { SFProDisplayBold, SFProDisplayMedium } from "@src/fonts";
-import { responsiveFontSize } from "@src/library/viewHelper";
-import Style from "@src/style";
+import { SFProDisplayBold } from "@src/fonts";
+import { isIphoneWithNotch, responsiveFontSize } from "@src/library/viewHelper";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
-    width: '90%',
+    width: '93%',
+  },
+  footer: {
+    height: responsiveFontSize(isIphoneWithNotch() ? 25 : 8),
   },
   row: {
     flexDirection: 'row',
@@ -17,6 +19,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     alignSelf: 'center',
     width: '90%',
+    marginBottom: responsiveFontSize(4),
     marginTop: responsiveFontSize(15)
   },
   textContainer: {
@@ -33,8 +36,8 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(24)
   },
   separator: {
-    height: responsiveFontSize(10)
-  }
+    height: responsiveFontSize(25)
+  },
 })
 
 export default styles

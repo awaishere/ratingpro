@@ -8,8 +8,9 @@ import SearchBar from '@components/SearchBar'
 import colors from '@src/colors'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { P1 } from '@src/assets/images'
-import { responsiveFontSize } from '@src/library/viewHelper'
+import { isIphoneWithNotch, responsiveFontSize } from '@src/library/viewHelper'
 import { data } from './data'
+import Post from '@components/Post'
 
 const Header = () => {
   return (
@@ -37,15 +38,21 @@ function index() {
       <FlatList
         data={data}
         ListHeaderComponent={<Text style={styles.headerText}>Explore</Text>}
-        ListHeaderComponentStyle={{ marginVertical: responsiveFontSize(20) }}
+        ListHeaderComponentStyle={{
+          marginVertical: responsiveFontSize(15),
+          marginLeft: responsiveFontSize(10)
+        }}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
-        renderItem={null}
+        renderItem={({ item }) => <Post item={item} />}
         bounces={false}
         contentContainerStyle={styles.container}
         extraHeight={20}
+        keyExtractor={_item => _item.key}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
       </FlatList>
+
+      <View style={styles.footer} />
     </React.Fragment>
   )
 }
