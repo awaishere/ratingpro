@@ -6,7 +6,8 @@ export const data = [
     description: 'Mollit velit laboris rem velit Lorem veniam do pariatur exercitation enim aliquip.',
     editor: { name: "mirza_umr", pic: P2 },
     image: Post1,
-    likes: '1.2k',
+    likes: '1.2 k',
+    isLiked: true,
     dislikes: 100,
     created_at: '27 MIN AGO', // FIXME
     comments: [
@@ -32,7 +33,8 @@ export const data = [
     description: 'Mollit velit laboris rem velit Lorem veniam do pariatur exercitation enim aliquip.',
     editor: { name: "mirza_umr", pic: P2 },
     image: Post2,
-    likes: '1.2k',
+    likes: '1.2 k',
+    isLiked: false,
     dislikes: 100,
     created_at: '27 MIN AGO', // FIXME
     comments: [
