@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   h6: {
     width: '85%',
     fontSize: responsiveFontSize(14),
+    color: colors.black,
     fontFamily: SFProDisplay
   },
   p: {

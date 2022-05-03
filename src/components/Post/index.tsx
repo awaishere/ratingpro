@@ -19,7 +19,7 @@ function index({ item, navigation }: any) {
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Icon name={"dots-vertical"} style={styles.customBtn} size={responsiveFontSize(20)} />
+          <Icon color={colors.black} name={"dots-vertical"} style={styles.customBtn} size={responsiveFontSize(20)} />
         </TouchableOpacity>
       </View>
 
@@ -36,7 +36,7 @@ function index({ item, navigation }: any) {
 
           <View style={[styles.row, styles.left]}>
             <TouchableOpacity>
-              <CustomIcon name={"comment"} style={styles.customBtn} size={responsiveFontSize(20)} />
+              <CustomIcon name={"comment"} color={colors.black} style={styles.customBtn} size={responsiveFontSize(20)} />
             </TouchableOpacity>
             <Text style={styles.stats}>{item.comments.length}</Text>
           </View>
@@ -44,7 +44,7 @@ function index({ item, navigation }: any) {
 
         <View style={styles.row}>
           <TouchableOpacity>
-            <CustomIcon name={"dislike"} style={styles.customBtn} size={responsiveFontSize(20)} />
+            <CustomIcon name={"dislike"} color={colors.black} style={styles.customBtn} size={responsiveFontSize(20)} />
           </TouchableOpacity>
           <Text style={styles.stats}>{item.dislikes}</Text>
 
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: responsiveFontSize(13),
+    color: colors.black,
     fontFamily: SFProDisplay
   },
   headerImage: {
@@ -113,6 +114,7 @@ const styles = StyleSheet.create({
   },
   stats: {
     fontFamily: SFProDisplayBold,
+    color: colors.black,
     fontSize: responsiveFontSize(15)
   },
   customBtn: {
@@ -120,6 +122,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: SFProDisplay,
+    color: colors.black,
     fontSize: responsiveFontSize(14)
   },
   created_at: {
@@ -142,6 +145,7 @@ const styles = StyleSheet.create({
   },
   commentInput: {
     width: '80%',
+    color: colors.black,
     fontSize: responsiveFontSize(14),
     fontFamily: SFProDisplay,
   },
@@ -155,6 +159,7 @@ const styles = StyleSheet.create({
   },
   all: {
     fontFamily: SFProDisplayMedium,
+    color: colors.black,
     fontSize: responsiveFontSize(11),
     letterSpacing: 1,
   },

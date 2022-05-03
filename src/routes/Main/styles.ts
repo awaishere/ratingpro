@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontFamily: SFProDisplayBold,
+    color: colors.black,
     fontSize: responsiveFontSize(24)
   },
   separator: {

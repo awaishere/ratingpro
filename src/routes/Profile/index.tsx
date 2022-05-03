@@ -52,7 +52,6 @@ function index(props: any) {
         bounces={false}
         keyExtractor={_item => _item.key}
         numColumns={2}
-        style={{ alignSelf: 'center' }}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={ListHeader}
         ListHeaderComponentStyle={{
@@ -61,7 +60,7 @@ function index(props: any) {
           alignItems: 'center'
         }}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
-        renderItem={({ item, index }) => <Image source={item.image} style={[styles.itemImage, index % 2 == 0 ? { marginRight: responsiveFontSize(3) } : { marginLeft: responsiveFontSize(3) }]} />}
+        renderItem={({ item, index }) => <Image source={item.image} style={styles.itemImage} />}
       />
 
       <View style={styles.footer} />

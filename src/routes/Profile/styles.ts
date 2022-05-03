@@ -39,11 +39,13 @@ const styles = StyleSheet.create({
   },
   header: {
     fontFamily: SFProDisplayBold,
+    color: colors.black,
     marginTop: responsiveFontSize(30),
     fontSize: responsiveFontSize(24)
   },
   username: {
     fontFamily: SFProDisplay,
+    color: colors.black,
     marginTop: responsiveFontSize(10),
     fontSize: responsiveFontSize(16)
   },
@@ -54,13 +56,15 @@ const styles = StyleSheet.create({
   },
   commonText: {
     fontFamily: SFProDisplayBold,
+    color: colors.black,
     marginTop: responsiveFontSize(10),
     fontSize: responsiveFontSize(18)
   },
   itemImage: {
-    resizeMode: 'contain',
-    borderRadius: responsiveFontSize(2),
-    width: responsiveFontSize(160),
+    resizeMode: 'cover',
+    borderRadius: responsiveFontSize(4),
+    flex: 1,
+    marginHorizontal: responsiveFontSize(4),
     height: responsiveFontSize(120)
   },
   separator: {

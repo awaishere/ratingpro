@@ -8,7 +8,7 @@ import SearchBar from '@components/SearchBar'
 import colors from '@src/colors'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { P1 } from '@src/assets/images'
-import { isIphoneWithNotch, responsiveFontSize } from '@src/library/viewHelper'
+import { responsiveFontSize } from '@src/library/viewHelper'
 import { data } from './data'
 import Post from '@components/Post'
 
