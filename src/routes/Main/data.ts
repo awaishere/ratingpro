@@ -30,7 +30,7 @@ export const data = [
     ]
   },
   {
-    key: '_p1', title: 'linn_doepop',
+    key: '_p2', title: 'linn_doepop',
     description: 'Mollit velit laboris rem velit Lorem veniam do pariatur exercitation enim aliquip.',
     editor: { name: "mirza_umr", pic: P2 },
     image: Post2,
