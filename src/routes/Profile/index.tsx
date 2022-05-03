@@ -39,7 +39,7 @@ const ListHeader = () => {
   )
 }
 
-function index(props: any) {
+function Profile(props: any) {
   return (
     <React.Fragment>
       <GeneralStatusBarColor barStyle="dark-content" />
@@ -68,4 +68,4 @@ function index(props: any) {
   )
 }
 
-export default index
+export default Profile

@@ -28,7 +28,7 @@ const LoginSchema = Yup.object().shape({
 
 });
 
-function index(props: any) {
+function Login(props: any) {
 
   const login = () => {
     props.navigation.navigate('authenticatedStack')
@@ -111,4 +111,4 @@ function index(props: any) {
   )
 }
 
-export default index
+export default Login

@@ -27,7 +27,7 @@ const Header = () => {
   )
 }
 
-function index(props: any) {
+function Main(props: any) {
   return (
     <React.Fragment>
       <GeneralStatusBarColor barStyle="dark-content" />
@@ -57,4 +57,4 @@ function index(props: any) {
   )
 }
 
-export default index
+export default Main
