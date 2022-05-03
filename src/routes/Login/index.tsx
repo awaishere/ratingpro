@@ -28,10 +28,10 @@ const LoginSchema = Yup.object().shape({
 
 });
 
-function index() {
+function index(props: any) {
 
   const login = () => {
-
+    props.navigation.navigate('authenticatedStack')
   }
 
   return (
@@ -40,6 +40,7 @@ function index() {
       <Background />
 
       <KeyboardAwareScrollView
+        bounces={false}
         contentContainerStyle={styles.container}
         extraHeight={20}
         showsVerticalScrollIndicator={false}

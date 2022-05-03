@@ -1,6 +1,6 @@
 let SFProDisplay = 'SFProDisplay-Regular';
 let SFProDisplayMedium = 'SFProDisplay-Medium';
-let SFProDisplayBold = 'SFProDisplay-Black';
+let SFProDisplayBold = 'Roboto-Medium';
 
 export {
   SFProDisplay,
