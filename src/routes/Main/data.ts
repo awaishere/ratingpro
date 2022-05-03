@@ -8,6 +8,7 @@ export const data = [
     image: Post1,
     likes: '1.2 k',
     isLiked: true,
+    reportable: true,
     dislikes: 100,
     created_at: '27 MIN AGO', // FIXME
     comments: [
@@ -35,6 +36,7 @@ export const data = [
     image: Post2,
     likes: '1.2 k',
     isLiked: false,
+    reportable: false,
     dislikes: 100,
     created_at: '27 MIN AGO', // FIXME
     comments: [
