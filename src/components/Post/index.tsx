@@ -5,18 +5,17 @@ import { responsiveFontSize } from '@src/library/viewHelper'
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { P1 } from '@src/assets/images'
 
-function index({ item }: any) {
+function index({ item, navigation }: any) {
   return (
     <React.Fragment>
       <View style={[styles.row, styles.between]}>
-        <View style={[styles.row, styles.p1]}>
+        <TouchableOpacity onPress={() => navigation.navigate('profile')} style={[styles.row, styles.p1]}>
           <Image source={item.editor.pic} style={styles.headerImage} />
 
           <Text style={styles.headerText}>{item.editor.name}</Text>
-        </View>
+        </TouchableOpacity>
 
         <TouchableOpacity>
           <Icon name={"dots-vertical"} style={styles.customBtn} size={responsiveFontSize(20)} />

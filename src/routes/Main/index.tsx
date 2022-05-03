@@ -27,7 +27,7 @@ const Header = () => {
   )
 }
 
-function index() {
+function index(props: any) {
   return (
     <React.Fragment>
       <GeneralStatusBarColor barStyle="dark-content" />
@@ -43,7 +43,7 @@ function index() {
           marginLeft: responsiveFontSize(10)
         }}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
-        renderItem={({ item }) => <Post item={item} />}
+        renderItem={({ item }) => <Post navigation={props.navigation} item={item} />}
         bounces={false}
         contentContainerStyle={styles.container}
         extraHeight={20}
