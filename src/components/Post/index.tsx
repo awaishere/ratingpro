@@ -5,7 +5,7 @@ import { responsiveFontSize } from '@src/library/viewHelper'
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { P1 } from '@src/assets/images'
+import { Disclaimer, P1 } from '@src/assets/images'
 
 function index({ item, navigation }: any) {
   return (
@@ -46,6 +46,12 @@ function index({ item, navigation }: any) {
             <CustomIcon name={"dislike"} style={styles.customBtn} size={responsiveFontSize(20)} />
           </TouchableOpacity>
           <Text style={styles.stats}>{item.dislikes}</Text>
+
+          {item.reportable &&
+            <TouchableOpacity style={styles.left}>
+              <Image source={Disclaimer} style={styles.disclaimer} />
+            </TouchableOpacity>
+          }
         </View>
       </View>
 
@@ -136,5 +142,10 @@ const styles = StyleSheet.create({
   },
   commentHolder: {
     paddingHorizontal: responsiveFontSize(5),
+  },
+  disclaimer: {
+    resizeMode: 'contain',
+    height: responsiveFontSize(20),
+    width: responsiveFontSize(20)
   }
 })
