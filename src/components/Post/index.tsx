@@ -1,11 +1,12 @@
 import colors from '@src/colors'
-import { SFProDisplay, SFProDisplayBold } from '@src/fonts'
+import { SFProDisplay, SFProDisplayBold, SFProDisplayMedium } from '@src/fonts'
 import CustomIcon from '@src/library/CustomIcon'
 import { responsiveFontSize } from '@src/library/viewHelper'
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Disclaimer, P1 } from '@src/assets/images'
+import Comment from '@components/Comment'
 
 function index({ item, navigation }: any) {
   return (
@@ -61,6 +62,10 @@ function index({ item, navigation }: any) {
       </View>
 
       <Text style={styles.description}>{item.description}</Text>
+
+      {item.comments.length > 1 && <TouchableOpacity style={styles.allComments}><Text style={styles.all}>{`View all ${item.comments.length - 1} comments`}</Text></TouchableOpacity>}
+
+      {item.comments.length > 0 && <Comment item={item.comments[0]} />}
 
       <View style={[styles.row, styles.top, styles.commentHolder]}>
         <Image source={P1} style={styles.commentor} />
@@ -147,5 +152,13 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     height: responsiveFontSize(20),
     width: responsiveFontSize(20)
+  },
+  all: {
+    fontFamily: SFProDisplayMedium,
+    fontSize: responsiveFontSize(11),
+    letterSpacing: 1,
+  },
+  allComments: {
+    marginTop: responsiveFontSize(10)
   }
 })
